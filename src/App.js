@@ -1,15 +1,10 @@
 import './styles/App.css';
-import Card from './components/card';
+import GameBoard from './components/gameboard';
 
 function App() {
   return (
     <div className="App">
-      <div className="card-container-main">
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-      </div>
+      <GameBoard></GameBoard>
     </div>
   );
 }
