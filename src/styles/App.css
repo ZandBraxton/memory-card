@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Raleway", sans-serif;
+  background-color: #222224
 }
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap");
 
@@ -10,11 +11,39 @@ html {
 
 *, *::before, *::after {
   box-sizing: inherit;
+  outline: 1px solid blue;
 }
 
-.card-container-main {
+header {
+  height: 150px;
+  /* width: 100%; */
+  background-color:#ee1515;
   display: flex;
   flex-flow: row;
-  margin-top: 1em;
-  margin-left: 1em;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+h1 {
+  text-align: center;
+}
+
+
+
+.title {
+  width: 500px;
+  color: white;
+  text-shadow: black 1px 1px;
+  font-size: 4rem;
+  margin: auto 0 auto auto;
+}
+
+.score-board {
+  display: flex;
+  flex-flow: row;
+  font-size: 2rem;
+  gap: 1em;
+  margin-left: auto;
+  margin-right: auto;
 }

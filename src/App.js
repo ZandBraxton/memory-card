@@ -1,12 +1,22 @@
 import './styles/App.css';
+import React, {useEffect, useState} from 'react';
+import Header from './components/header';
 import GameBoard from './components/gameboard';
+import { useGameboard } from './components/useGameboard';
+import { useScore } from './components/useScore';
+export default function App() {
+    const [score, highscore, cardcomponents, handleClick] = useGameboard()
 
-function App() {
+useEffect(() => {
+  console.log(score)
+})
+
   return (
     <div className="App">
-      <GameBoard></GameBoard>
+      <Header score={score} highscore={highscore}></Header>
+      <GameBoard cards={cardcomponents} handleClick={handleClick}></GameBoard>
     </div>
   );
 }
 
-export default App;
+
