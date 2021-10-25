@@ -12,8 +12,7 @@ export default function Card(props) {
 
 
     useEffect(() => {
-        const randomPoke = Math.floor(Math.random() * 150) +1
-        const url = "https://pokeapi.co/api/v2/pokemon/" + randomPoke
+        const url = "https://pokeapi.co/api/v2/pokemon/" + props.id
         const fetchData = async() => {
             try{
                 const response = await fetch(url)
@@ -21,9 +20,8 @@ export default function Card(props) {
                 setPokemon({
                     name: json.name,
                     img: json.sprites.front_default,
-                    id: randomPoke
+                    id: props.id
                 })
-                console.log(json.sprites.front_default)
             } catch(error) {
                 console.log("error", error)
             }
@@ -31,7 +29,7 @@ export default function Card(props) {
 
         fetchData()
 
-    }, [])
+    }, [props.id])
 
 
     
