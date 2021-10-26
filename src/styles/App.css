@@ -11,12 +11,10 @@ html {
 
 *, *::before, *::after {
   box-sizing: inherit;
-  outline: 1px solid blue;
 }
 
 header {
   height: 150px;
-  /* width: 100%; */
   background-color:#ee1515;
   display: flex;
   flex-flow: row;
@@ -29,21 +27,22 @@ h1 {
   text-align: center;
 }
 
-
-
 .title {
   width: 500px;
   color: white;
   text-shadow: black 1px 1px;
   font-size: 4rem;
-  margin: auto 0 auto auto;
+  margin: auto auto auto auto;
 }
 
 .score-board {
+  color: white;
+  text-shadow: black 1px 1px;
+  position: absolute;
   display: flex;
   flex-flow: row;
   font-size: 2rem;
+  padding-right: 1em;
   gap: 1em;
-  margin-left: auto;
-  margin-right: auto;
+  right: 0;
 }

@@ -1,15 +1,12 @@
 import '../styles/card.css'
 import React, {useState, useEffect} from 'react'
 
-
-
 export default function Card(props) {
     const [pokemon, setPokemon] = useState({
         name: '',
         img: '',
         id: ''
     })
-
 
     useEffect(() => {
         const url = "https://pokeapi.co/api/v2/pokemon/" + props.id
@@ -41,7 +38,7 @@ return (
         src={pokemon.img} 
         alt={pokemon.name}/>
         <div className="card-container">
-            <h4><b>{pokemon.name}</b></h4>
+            <h4><b className="pokemon-name">{pokemon.name}</b></h4>
         </div>
     </div>
 )

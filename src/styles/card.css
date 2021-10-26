@@ -9,15 +9,26 @@
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.767);
+    transform: scale(1.05, 1.05);
   }
 
   .card-container {
+    outline: 1px solid black;
     padding: 2px 16px;
+    background-color: #ee1515;
+    border-radius: 12px;
   }
 
 
 .pokemon-img {
     height: 250px;
     width: 250px;
+}
+
+.pokemon-name {
+  color: white;
+  text-shadow: black 1px 1px;
+  font-size: 1.4rem;
+  text-transform: capitalize;
 }
